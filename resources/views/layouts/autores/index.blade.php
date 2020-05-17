@@ -3,8 +3,8 @@
 @section('title', 'Autores')
 
 @section('content')
-    <div class="ui right floated small primary labeled icon button">
-        <i class="user icon"></i> Añadir Autor
+    <div class="blue ui buttons">
+        <a href="/autores/create" class="ui button">Añadir Autor</a>
     </div>
     <table class="ui celled table">
         <thead>
