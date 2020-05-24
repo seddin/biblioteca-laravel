@@ -13,7 +13,14 @@ class CrearTablaAlquileres extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('alquileres', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_usuario');
+            $table->integer('id_libro');
+            $table->date('fecha_prestamo');
+            $table->date('fecha_devolucion');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CrearTablaAlquileres extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('alquileres');
     }
 }

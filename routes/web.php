@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::resource('autores', 'AutorController');
 Route::resource('libros', 'LibroController');
 Route::resource('usuarios', 'UsuarioController');
+Route::resource('passusuarios', 'PassUsuarioController');
+Route::resource('rolesusuarios', 'RolController');
+Route::resource('alquileres', 'AlquilerController');

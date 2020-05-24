@@ -13,7 +13,12 @@ class CrearTablaPassusuarios extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('passusuarios', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->string('password');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CrearTablaPassusuarios extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('usuarios');
     }
 }

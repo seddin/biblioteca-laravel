@@ -13,7 +13,12 @@ class CrearTablaRolesusuarios extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('rolesusuarios', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_usuario');
+            $table->string('nombre_rol');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CrearTablaRolesusuarios extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('rolesusuarios');
     }
 }

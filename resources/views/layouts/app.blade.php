@@ -21,6 +21,12 @@
         <a class="item" href="/usuarios">
             <i class="address book layout icon"></i> Usuarios
         </a>
+        <a class="item" href="/passusuarios">
+            <i class="address book layout icon"></i> Pass Usuarios
+        </a>
+        <a class="item" href="/rolesusuarios">
+            <i class="address book layout icon"></i> Roles Usuarios
+        </a>
         <a class="item" href="/alquileres">
             <i class="handshake outline layout icon"></i> Alquileres
         </a>
