@@ -13,7 +13,14 @@ class CrearTablaUsuarios extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('usuarios', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->string('password');
+            $table->string('telefono');
+            $table->date('fecha_entrega');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CrearTablaUsuarios extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('usuarios');
     }
 }
