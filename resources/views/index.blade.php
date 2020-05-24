@@ -3,5 +3,7 @@
 @section('title', 'Tarea Online 7')
 
 @section('content')
-    <p>This is my body content.</p>
+    <h3>Biblioteca</h3>
+
+    <a href="/autores">Autores</a>
 @endsection

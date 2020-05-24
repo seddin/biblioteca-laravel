@@ -28,22 +28,35 @@
                     <td>{{ $autor->sexo == "M" ? "Mujer": "Hombre" }}</td>
                     <td>{{ $autor->edad }}</td>
                     <td>
-                        <a class="item" href="">
+                        <a class="item" href="/autores/{{ $autor->id }}">
                             <i class="eye layout icon"></i>
                         </a>
                     </td>
                     <td>
-                        <a class="item" href="">
+                        <a class="item" href="/autores/{{ $autor->id }}/edit">
                             <i class="edit layout icon"></i>
                         </a>
                     </td>
                     <td>
-                        <a class="item" href="">
-                            <i class="eraser layout icon"></i>
-                        </a>
+                        <form action="/autores/{{ $autor->id }}" method="post">
+                            @method("delete")
+                            @csrf
+
+                            <a class="item" type="submit" onclick="eliminar(this)">
+                                <i class="eraser layout icon"></i>
+                            </a>
+                        </form>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+
+    <script type="text/javascript">
+        function eliminar (o) {
+            if (confirm ("¿Seguro que quieres borrar el autor?")) {
+                o.parentNode.submit();
+            }
+        }
+    </script>
 @endsection

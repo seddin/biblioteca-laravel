@@ -16,7 +16,7 @@ class AutorController extends Controller
     public function index()
     {
         $autores = Autor::all();
-        return view('layouts.autores.autores', ["autores" => $autores]);
+        return view('layouts.autores.index', ["autores" => $autores]);
     }
 
     /**
@@ -26,7 +26,7 @@ class AutorController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.autores.create');
     }
 
     /**
@@ -37,41 +37,44 @@ class AutorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $autor = new Autor;
+        $autor->nombre = $request->nombre;
+        $autor->apellidos = $request->apellidos;
+        $autor->nacionalidad = $request->nacionalidad;
+        $autor->sexo = $request->sexo;
+        $autor->edad = $request->edad;
+        $autor->save();
+
+        return redirect('autores');
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Autor  $autor
-     * @return \Illuminate\Http\Response
      */
-    public function show(Autor $autor)
+    public function show($id)
     {
-        //
+        $autor = Autor::find($id);
+
+        return view('layouts.autores.show', ["autor" => $autor]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Autor  $autor
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Autor $autor)
+    public function edit($id)
     {
-        //
-    }
+        $autor = Autor::find($id);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Autor  $autor
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Autor $autor)
+        return view('layouts.autores.edit', ["autor" => $autor]);
+    }
+    public function update(Request $request, $id)
     {
-        //
+        $autor = Autor::find($id);
+        $autor->nombre = $request->nombre;
+        $autor->apellidos = $request->apellidos;
+        $autor->nacionalidad = $request->nacionalidad;
+        $autor->sexo = $request->sexo;
+        $autor->edad = $request->edad;
+        $autor->save();
+
+        return redirect('autores');
     }
 
     /**
@@ -80,8 +83,10 @@ class AutorController extends Controller
      * @param  \App\Autor  $autor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Autor $autor)
+    public function destroy($id)
     {
-        //
+        $autor = Autor::find($id);
+        $autor->delete();
+        return redirect('autores');
     }
 }

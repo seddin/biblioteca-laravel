@@ -13,7 +13,15 @@ class CrearTablaLibros extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('libros', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_autor');
+            $table->string('titulo');
+            $table->string('categoria');
+            $table->string('descripcion');
+            $table->integer('precio');
+            $table->timestamps();
+        });
     }
 
     /**
