@@ -22,4 +22,5 @@ Route::resource('libros', 'LibroController');
 Route::resource('usuarios', 'UsuarioController');
 Route::resource('passusuarios', 'PassUsuarioController');
 Route::resource('rolesusuarios', 'RolController');
+Route::resource('permisos', 'PermisoController');
 Route::resource('alquileres', 'AlquilerController');

@@ -13,7 +13,12 @@ class CrearTablaPermisosusuarios extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('permisosusuarios', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_rol');
+            $table->string('nombre_permiso');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CrearTablaPermisosusuarios extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('permisosusuarios');
     }
 }

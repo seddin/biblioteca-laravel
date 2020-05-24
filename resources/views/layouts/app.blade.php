@@ -27,6 +27,9 @@
         <a class="item" href="/rolesusuarios">
             <i class="address book layout icon"></i> Roles Usuarios
         </a>
+        <a class="item" href="/permisos">
+            <i class="address book layout icon"></i> Permisos Usuarios
+        </a>
         <a class="item" href="/alquileres">
             <i class="handshake outline layout icon"></i> Alquileres
         </a>
