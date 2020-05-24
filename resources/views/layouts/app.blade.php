@@ -22,13 +22,13 @@
             <i class="address book layout icon"></i> Usuarios
         </a>
         <a class="item" href="/passusuarios">
-            <i class="address book layout icon"></i> Pass Usuarios
+            <i class="address card layout icon"></i> Pass Usuarios
         </a>
         <a class="item" href="/rolesusuarios">
-            <i class="address book layout icon"></i> Roles Usuarios
+            <i class="user secret layout icon"></i> Roles Usuarios
         </a>
         <a class="item" href="/permisos">
-            <i class="address book layout icon"></i> Permisos Usuarios
+            <i class="sitemap layout icon"></i> Permisos Usuarios
         </a>
         <a class="item" href="/alquileres">
             <i class="handshake outline layout icon"></i> Alquileres
