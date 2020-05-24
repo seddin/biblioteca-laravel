@@ -31,6 +31,6 @@ class CrearTablaLibros extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('libros');
     }
 }

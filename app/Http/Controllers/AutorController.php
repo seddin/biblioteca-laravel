@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Autor;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 
 class AutorController extends Controller
 {

@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('autores', 'AutorController');
+Route::resource('libros', 'LibroController');
